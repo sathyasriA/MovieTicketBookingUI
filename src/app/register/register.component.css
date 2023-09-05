@@ -1,0 +1,27 @@
+.card{
+    width: 340%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12%;
+    padding-left: 250%;
+}
+
+.card-header{
+}
+
+
+.center {
+    float: right;
+    width: 300px;
+    padding: 10px;
+}
+.namewithbox{
+    display: flex;
+    flex-direction: row;
+}
+
+.center {
+    float: right;
+    width: 300px;
+    padding: 10px;
+}

@@ -1,0 +1,46 @@
+<div class="center">
+    <div class="card">
+        <div class="card-header" style="padding-bottom: 5%;">Welcome to BookYourShow</div>
+        <div class="card-body">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                    <div class = "namewithbox">
+                        <label for="name" style="padding-top: 5%; margin-right: 5%;">Username</label>
+                        <input 
+                            formControlName="userName"
+                            id="userName" 
+                            type="text" 
+                            class="form-control">
+                        </div>
+                    <div *ngIf="f['userName'].touched && f['userName'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['userName'].errors && f['userName'].errors['required']">Name is required.</div>
+                        <div *ngIf="f['userName'].errors && f['userName'].errors['minlength']">Name should be 3 character.</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class = "namewithbox">
+                        <label for="name" style="padding-top: 5%; margin-right: 5%">Password</label>
+                        <input 
+                            formControlName="password"
+                            id="password" 
+                            type="password" 
+                            class="form-control">
+                    </div>
+                    <div *ngIf="f['password'].touched && f['password'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['password'].errors && f['password'].errors['required']">Password is required.</div>
+                    </div>
+                </div>
+                <div>
+                    <button [disabled]="loading" class="btn btn-primary">
+                        <span *ngIf="loading" class="spinner-border spinner-border-sm me-1"></span>
+                        Login
+                    </button>
+                    <button [disabled]="loading" class="btn btn-primary">
+                        <span *ngIf="loading" class="spinner-border spinner-border-sm me-1"></span>
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

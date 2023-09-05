@@ -1,0 +1,18 @@
+.outerBox {
+    width: 100%;
+    display: flex;
+    flex-direction: row; 
+}
+
+.box {
+    width: 20%;
+}
+
+img {
+    display: block;
+    max-width:480px;
+    max-height:200px;
+    width: auto;
+    height: auto;
+    padding-left: 12%;
+}
